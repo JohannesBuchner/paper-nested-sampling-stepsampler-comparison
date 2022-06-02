@@ -1,5 +1,7 @@
 Work in progress
 
+This repo will only make sense if you have the paper draft. 
+You are welcome to request a copy from me!
 
 Usage
 -------

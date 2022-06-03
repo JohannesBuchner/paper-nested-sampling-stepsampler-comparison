@@ -20,7 +20,14 @@ which contains the calibrated Nsteps and cost for each considered problem.
 Code structure
 ---------------
 
-`problems.py` implements the problem likelihood and volume functions.
-This is used by `evaluate_sampling.py` sets up UltraNest to run for a few regions, records shrinkage samples and other diagnostics
+`calibrator.py` iterates through the problems and applies the shrinkage test to vet configurations. 
 
-`calibrator.py` iterates through the problems and applies the shrinkage test to vet configurations. It also builds the LRPS method from the first input argument.
+It builds the LRPS method from the first input argument.
+The LRPS methods are implemented within UltraNest here: 
+ `API documentation <https://johannesbuchner.github.io/UltraNest/ultranest.html#module-ultranest.stepsampler>`_,
+ `code <https://johannesbuchner.github.io/UltraNest/_modules/ultranest/stepsampler.html>`_.
+
+Problem functions are taken from `problems.py`, which implements likelihood and volume functions.
+
+Then, `calibrator.py` calls `evaluate_warmed_sampler` implemented in 
+`evaluate_sampling.py`, which simulates a nested sampling run for a few thousand iteration, records shrinkage samples and other diagnostics.

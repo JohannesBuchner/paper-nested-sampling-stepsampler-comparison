@@ -1,8 +1,11 @@
 Work in progress
 ----------------
 
-This repo will only make sense if you have the paper draft. 
-You are welcome to request a copy from me!
+This repository accompanies the paper "Comparison of Step Samplers for Nested Sampling"
+(published at https://www.mdpi.com/2673-9984/5/1/46).
+
+Code for running and evaluating the simulations is provided here 
+in the spirit of reproducible science.
 
 Usage
 -------
